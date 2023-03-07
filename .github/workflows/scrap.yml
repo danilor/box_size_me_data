@@ -14,6 +14,7 @@ jobs:
           path: ./data/data.json
           write-mode: overwrite
           contents: node scrapBoardgames.js
+
       - name: Commit & Push
           uses: Andro999b/push@v1.3
           with:
