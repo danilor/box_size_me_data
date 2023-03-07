@@ -15,3 +15,10 @@ jobs:
           path: ./data/data.json
           write-mode: overwrite
           contents: node scrapBoardgames.js
+      - name: Deploy
+        uses: exuanbo/actions-deploy-gist@v1
+        with:
+          token: ${{ secrets.TOKEN }}
+          gist_id: f217c8ce9b9dc8513e8ac06db067c3a8
+          file_path: .&data/data.json
+          file_type: text
