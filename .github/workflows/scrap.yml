@@ -8,8 +8,6 @@ jobs:
       - run: npm --version
       - uses: actions/checkout@v3
       - run: npm install
-      - run: npm start
-
       - name: Overwrite file
         uses: "DamianReeves/write-file-action@master"
         with:
