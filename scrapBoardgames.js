@@ -40,6 +40,7 @@ async function storeResult(jsonResult){
     const data = JSON.stringify(jsonResult);
    await fs.writeFileSync( folderConfig.dataFolder +'list.json', data);
     // console.log(data);
+    log('Storaged completed');
 }
 
 /**
