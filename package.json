@@ -1,0 +1,33 @@
+{
+  "name": "box_size_me_data",
+  "version": "1.0.0",
+  "description": "Box size Me data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danilor/box_size_me_data.git"
+  },
+  "keywords": [
+    "box",
+    "size",
+    "me",
+    "board",
+    "games",
+    "boxsize",
+    "me",
+    "arkhive"
+  ],
+  "author": "Danilo Ramirez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danilor/box_size_me_data/issues"
+  },
+  "homepage": "https://github.com/danilor/box_size_me_data#readme",
+  "dependencies": {
+    "moment": "^2.29.4",
+    "momentjs": "^2.0.0"
+  }
+}
