@@ -27,7 +27,7 @@ const endingPage = 40;
  * @returns {Promise<void>}
  */
 async function writeTemporalFile(page, html) {
-    // await fs.writeFile(folderConfig.tempFolder + 'HTML_' + page + '.html', html, 'utf-8');
+    await fs.writeFile(folderConfig.tempFolder + 'HTML_' + page + '.html', html, 'utf-8');
 }
 
 /**
