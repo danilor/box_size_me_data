@@ -19,7 +19,7 @@ const folderConfig = require("./config/folder.config");
 
 /// Starting and ending page
 const startingPage = 1;
-const endingPage = 40;
+const endingPage = 3;
 
 
 /**
@@ -36,8 +36,9 @@ async function writeTemporalFile(page, html) {
  * @returns {Promise<void>}
  */
 async function storeResult(jsonResult){
+    log('Storing all elements in a json file');
     const data = JSON.stringify(jsonResult);
-    await fs.writeFileSync( folderConfig.dataFolder +'list.json', data);
+   await fs.writeFileSync( folderConfig.dataFolder +'list.json', data);
     // console.log(data);
 }
 
