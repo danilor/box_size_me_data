@@ -15,10 +15,16 @@ jobs:
           write-mode: overwrite
           contents: node scrapBoardgames.js
 
-      - name: Commit & Push
-          uses: "Andro999b/push@v1.3"
-          with:
-            github_token: ${{ secrets.TOKEN }}
-            branch: main
-            force: true
-            message: 'Overwritten by Github Actions - ${date}'
+      - name: Commit files
+        id: commit
+        run: |
+          git config --local user.email "daniloramirez.cr@gmail.com"
+          git config --local user.name "Danilram"
+          git add --all
+          git commit -m "Add changes" -a
+        shell: bash
+      - name: Push changes
+        if: steps.commit.outputs.push == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.TOKEN }}
