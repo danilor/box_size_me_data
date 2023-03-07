@@ -20,5 +20,5 @@ jobs:
         with:
           token: ${{ secrets.TOKEN }}
           gist_id: f217c8ce9b9dc8513e8ac06db067c3a8
-          file_path: data/data.json
+          file_path: data/list.json
           file_type: text

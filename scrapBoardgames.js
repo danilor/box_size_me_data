@@ -39,6 +39,7 @@ async function storeResult(jsonResult){
     log('Storing all elements in a json file');
     const data = JSON.stringify(jsonResult);
    await fs.writeFileSync( folderConfig.dataFolder +'list.json', data);
+
     // console.log(data);
     log('Storaged completed');
 }
