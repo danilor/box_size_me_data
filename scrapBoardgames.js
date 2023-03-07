@@ -38,6 +38,7 @@ async function writeTemporalFile(page, html) {
 async function storeResult(jsonResult){
     const data = JSON.stringify(jsonResult);
     fs.writeFileSync( folderConfig.dataFolder +'list.json', data);
+    console.log(data);
 }
 
 /**
@@ -141,11 +142,11 @@ async function readPage(page) {
  * Helper function
  */
 function log(t) {
-    if (typeof t === 'string') {
+    /*if (typeof t === 'string') {
         console.log('[LOG] ' + t);
     } else {
         console.log(t)
-    }
+    }*/
 }
 
 /**
