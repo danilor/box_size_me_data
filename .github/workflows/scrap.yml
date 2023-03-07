@@ -19,6 +19,8 @@ jobs:
         id: commit
         run: |
           git config --global --add safe.directory /__w/box_size_me_data/box_size_me_data
+          git config --global user.email "daniloramirez.cr@gmail.com"
+          git config --global user.name "Danilo Ramirez"
           git add . --all
           git commit -m "Add changes"
         shell: bash
