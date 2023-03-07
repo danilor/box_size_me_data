@@ -14,7 +14,8 @@ jobs:
         with:
           path: ./data/data.json
           write-mode: overwrite
-          contents: node scrapBoardgames.js
+          contents: |
+            node scrapBoardgames.js
       - name: Deploy
         uses: exuanbo/actions-deploy-gist@v1
         with:
