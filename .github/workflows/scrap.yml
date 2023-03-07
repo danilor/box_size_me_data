@@ -18,10 +18,8 @@ jobs:
       - name: Commit files
         id: commit
         run: |
-          git config --local user.email "daniloramirez.cr@gmail.com"
-          git config --local user.name "Danilram"
-          git add --all
-          git commit -m "Add changes" -a
+          git add . --all
+          git commit -m "Add changes"
         shell: bash
       - name: Push changes
         if: steps.commit.outputs.push == 'true'
