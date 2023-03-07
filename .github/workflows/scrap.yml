@@ -8,23 +8,25 @@ jobs:
       - run: npm --version
       - uses: actions/checkout@v3
       - run: npm install
+      - run: ${{ secrets.GITHUB_TOKEN }}
+      - run: ${{ secrets.TOKEN }}
       - name: Overwrite file
         uses: "DamianReeves/write-file-action@master"
         with:
           path: ./data/data.json
           write-mode: overwrite
           contents: node scrapBoardgames.js
-
-      - name: Commit files
-        id: commit
-        run: |
-          git config --global --add safe.directory /__w/box_size_me_data/box_size_me_data
-          git config --global user.email "daniloramirez.cr@gmail.com"
-          git config --global user.name "Danilo Ramirez"
-          git add . --all
-          git commit -m "Add changes"
-        shell: bash
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+#
+#       - name: Commit files
+#        id: commit
+#        run: |
+#          git config --global --add safe.directory /__w/box_size_me_data/box_size_me_data
+#         git config --global user.email "daniloramirez.cr@gmail.com"
+#         git config --global user.name "Danilo Ramirez"
+#          git add . --all
+#          git commit -m "Add changes"
+#        shell: bash
+#      - name: Push changes
+#        uses: ad-m/github-push-action@master
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
