@@ -1,1 +1,1 @@
-git add --all . && git commit -m "General Changes" && git push 
+git add --all . && git commit -m "General Changes" && git push
