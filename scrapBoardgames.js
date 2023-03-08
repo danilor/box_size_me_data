@@ -19,7 +19,7 @@ const folderConfig = require("./config/folder.config");
 
 /// Starting and ending page
 const startingPage = 1;
-const endingPage = 40;
+const endingPage = 20;
 
 
 /**
@@ -78,9 +78,11 @@ async function processPage(html) {
             elementsInPage.push({
                 rank: parseInt(rank, 10),
                 thumbnail: $(element).find('.collection_thumbnail a img').attr('src'),
+                url: 'https://boardgamegeek.com'+cleanString($(element).find('.collection_objectname a.primary').attr('href').toString()),
+                id: cleanString($(element).find('.collection_objectname a.primary').attr('href').toString()).split('/')[2],
                 name: cleanString($(element).find('.collection_objectname a.primary').text().toString()),
                 description: cleanString($(element).find('.collection_objectname p.dull').text()),
-                year: cleanString($(element).find('.collection_objectname span.dull').text().replace('(').replace(')')),
+                year: cleanString($(element).find('.collection_objectname span.dull').text()),
                 rating: parseFloat(cleanString($(element).find('.collection_bggrating').first().text())),
 
             });
